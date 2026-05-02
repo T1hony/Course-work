@@ -1,41 +1,68 @@
 #ifndef GAME_LOGIC_H
 #define GAME_LOGIC_H
 
-#define CELL_EMPTY 0
-#define CELL_X 1
-#define CELL_O 2
+typedef enum {
+    CELL_EMPTY = 0,
+    CELL_X = 1,
+    CELL_O = 2
+} CellState;
 
-#define GAME_CONTINUES 0
-#define WIN_X 1
-#define WIN_O 2
+typedef enum {
+    GAME_CONTINUES = 0,
+    WIN_X = 1,
+    WIN_O = 2
+} GameStatus;
 
-#define MOVE_SUCCESS 1
-#define MOVE_FAIL 0
+typedef enum {
+    MOVE_FAIL = 0,
+    MOVE_SUCCESS = 1
+} MoveResult;
+
+typedef enum {
+    BOT_EASY = 1,
+    BOT_HARD = 2,
+    BOT_IMPOSSIBLE = 3
+} BotDifficulty;
+
+typedef enum {
+    PLAYER_HUMAN = 0,
+    PLAYER_BOT = 1
+} PlayerType;
+
+typedef struct {
+    PlayerType type;
+    CellState symbol;
+    
+    union {
+        char nickname[32];
+        BotDifficulty difficulty;
+    } info;
+} PlayerInfo;
 
 typedef struct figure_desk {
     int x;
     int y;
-    int cell;
+    CellState cell;
     struct figure_desk *next;
 } figure_desk;
 
-typedef struct{
+typedef struct {
     int x;
     int y;
-}Move;
+} Move;
+
 
 void init_game();
-
 void cleanup_game();
 
-int make_move(int x, int y, int player);
-
-int get_cell_state(int x, int y);
-
+MoveResult make_move(int x, int y, CellState player);
+CellState get_cell_state(int x, int y);
 const figure_desk* get_board_head();
+GameStatus check_win(int last_x, int last_y);
 
-int check_win(int last_x, int last_y);
+Move bot_make_move(CellState bot_symbol, BotDifficulty difficulty);
 
-Move bot_make_move(int bot_symbol);
+int save_game(const char* filename);
+int load_game(const char* filename);
 
-#endif 
+#endif
