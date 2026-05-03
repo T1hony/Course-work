@@ -1,0 +1,8 @@
+================================================================================
+Linker Errors
+Generated: 2026-05-03T16:41:24.964Z
+Total Errors: 1
+================================================================================
+
+[LNK1168] (MSVC)
+не удается открыть C:\Yandex.Disk\Course work\build\Debug\game.exe для записи [C:\Yandex.Disk\Course work\build\game.vcxproj]

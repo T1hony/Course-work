@@ -1,6 +1,7 @@
 #include "gui.h"
 #include <SDL3_ttf/SDL_ttf.h>
 #include <stdio.h>
+#include <math.h>
 
 #define CELL 40
 
@@ -10,6 +11,13 @@ static int cam_x = 0, cam_y = 0;
 
 static int bot_x = 999999;
 static int bot_y = 999999;
+
+int get_text_width(const char* text) {
+    if (!font || !text)  return 0;
+    int w, h;
+    TTF_GetStringSize(font, text, 0, &w, &h);
+    return w;
+}
 
 void gui_init(SDL_Renderer* renderer) {
     r = renderer;
@@ -90,7 +98,9 @@ void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficul
 }
 
 Move gui_get_cell_from_mouse(int mx, int my) {
-    Move m = { (mx - cam_x) / CELL, (my - cam_y) / CELL };
+    Move m;
+    m.x = (int)floor((double)(mx-cam_x) / CELL);
+    m.y = (int)floor((double)(my-cam_y) / CELL);
     return m;
 }
 
@@ -134,13 +144,17 @@ static void draw_menu() {
     SDL_Color w = {255, 255, 255, 255};
     SDL_FRect b[3] = {{300, 200, 200, 50}, {300, 300, 200, 50}, {300, 400, 200, 50}};
     char* t[] = {"НОВАЯ ИГРА", "СПРАВКА", "ОБ АВТОРЕ"};
-    int tx[] = {335, 355, 345};
-    for(int i=0; i<3; i++) {
+
+    for(int i = 0; i < 3; i++) {
         SDL_SetRenderDrawColor(r, 50, 50, 50, 255);
         SDL_RenderFillRect(r, &b[i]);
         SDL_SetRenderDrawColor(r, 255, 255, 255, 255);
         SDL_RenderRect(r, &b[i]);
-        draw_text(t[i], tx[i], 212 + i*100, w);
+
+        int text_w = get_text_width(t[i]);
+        int centered_x = (int)b[i].x + ((int)b[i].w / 2) - (text_w / 2);
+        
+        draw_text(t[i], centered_x, 212 + i * 100, w);
     }
 }
 
@@ -201,7 +215,9 @@ static void draw_settings(GameMode mode, BotDifficulty diff) {
     SDL_RenderFillRect(r, &start);
     draw_text("ИГРАТЬ!", 355, start_y + 15, white);
     
-    draw_text("Нажми ESC, чтобы вернуться", 240, 530, gray);
+    const char* esc_msg = "Нажми ESC для возврата в меню";
+    int esc_x = 400 - (get_text_width(esc_msg) / 2);
+    draw_text(esc_msg, esc_x, 530, gray);
 }
 
 static void draw_help() {
@@ -209,19 +225,31 @@ static void draw_help() {
     draw_text("ПРАВИЛА ИГРЫ", 320, 50, y);
     draw_text("- Соберите 5 фигур в ряд", 50, 120, y);
     draw_text("- WASD для камеры, ЛКМ для хода", 50, 160, y);
-    draw_text("ESC - меню", 230, 500, y);
-}
+    const char* esc_msg = "Нажми ESC для возврата в меню";
+    int esc_x = 400 - (get_text_width(esc_msg) / 2);
+    draw_text(esc_msg, esc_x, 530, y);}
 
 static void draw_about() {
     SDL_Color w = {255, 255, 255, 255};
-    draw_text("О ПРОГРАММЕ", 330, 50, w);
-    draw_text("Разработчик: Тимощенко Даниил Сергеевич", 50, 200, w);
-    draw_text("Разработчик: Цацу Глеб Михалович", 50, 250, w);
-    draw_text("Группа: 5131001/50603", 50, 300, w);
-    draw_text("СПбПУ Петра Великого (Политех)", 50, 350, w);
-    draw_text("Институт компбютерных наук и кибербезопасности(ИКНК)", 50, 400, w);
-    draw_text(" Высшая школа кибербезопасности и защиты информации", 50, 450, w);
-    draw_text("2026", 50, 500, w);
+    
+    const char* header = "О ПРОГРАММЕ";
+    int header_x = 400 - (get_text_width(header) / 2);
+    draw_text(header, header_x, 50, w);
+    
+    draw_text("Разработчик: Тимощенко Даниил Сергеевич", 50, 100, w);
+    draw_text("Разработчик: Цацу Глеб Михалович", 50, 150, w);
+    draw_text("Группа: 5131001/50603", 50, 200, w);
+    draw_text("СПбПУ Петра Великого (Политех)", 50, 250, w);
+    draw_text("Институт компбютерных наук и кибербезопасности(ИКНК)", 50, 300, w);
+    draw_text("Высшая школа кибербезопасности и защиты информации", 50, 350, w);
+    
+    const char* year = "2026";
+    int year_x = 400 - (get_text_width(year) / 2);
+    draw_text(year, year_x, 420, w);
+    
+    const char* esc_msg = "Нажми ESC для возврата в меню";
+    int esc_x = 400 - (get_text_width(esc_msg) / 2);
+    draw_text(esc_msg, esc_x, 530, w);
 }
 
 void gui_draw(GuiState state, GameStatus win_status, GameMode mode, BotDifficulty diff) {

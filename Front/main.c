@@ -3,6 +3,7 @@
 #include "gui.h"
 #include <stdio.h>
 #include <string.h>
+
 void write_log(const char* msg) {
     FILE* f = fopen("game.log", "a");
     if (f) {
@@ -94,7 +95,9 @@ int main(int argc, char* argv[])
                 make_move(0, 0, CELL_X);
                 gui_set_bot_move(0, 0);
                 current = CELL_O;
+            }
         }
+        
         last_state = state;
 
         if(state == GUI_GAME && win_status == GAME_CONTINUES)

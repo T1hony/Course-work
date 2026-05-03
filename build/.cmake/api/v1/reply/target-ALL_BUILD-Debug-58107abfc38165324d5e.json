@@ -17,6 +17,9 @@
 	"dependencies" : 
 	[
 		{
+			"id" : "svg2png::@6d912588806cae862c44"
+		},
+		{
 			"id" : "camera2png::@6d912588806cae862c44"
 		},
 		{
@@ -24,9 +27,6 @@
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "svg2png::@6d912588806cae862c44"
 		},
 		{
 			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
