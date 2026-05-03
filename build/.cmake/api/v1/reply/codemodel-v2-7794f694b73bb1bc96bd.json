@@ -266,14 +266,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-c2c076e245ec60d65440.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-5c8bfaa7eaffb6f811f9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-ALL_BUILD-Debug-58107abfc38165324d5e.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-fa0f063ac9bbebec127c.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 5
 				},
@@ -301,7 +301,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
-					"jsonFile" : "target-SDL3_ttf-shared-Debug-7125e3c1c61af36ca907.json",
+					"jsonFile" : "target-SDL3_ttf-shared-Debug-a15654d018fc233b0cd0.json",
 					"name" : "SDL3_ttf-shared",
 					"projectIndex" : 2
 				},
@@ -322,14 +322,14 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "camera2png::@6d912588806cae862c44",
-					"jsonFile" : "target-camera2png-Debug-c95c08d7bf4f56156555.json",
+					"jsonFile" : "target-camera2png-Debug-f1fbb6280af3e51e36c5.json",
 					"name" : "camera2png",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "emoji2png::@6d912588806cae862c44",
-					"jsonFile" : "target-emoji2png-Debug-7fa3a3f13c0beacd64cd.json",
+					"jsonFile" : "target-emoji2png-Debug-f32b2ccd61050caebabf.json",
 					"name" : "emoji2png",
 					"projectIndex" : 5
 				},
@@ -350,7 +350,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-plutosvg-Debug-a2d338270c980f520a49.json",
+					"jsonFile" : "target-plutosvg-Debug-d30f7a9bfe632fd4df00.json",
 					"name" : "plutosvg",
 					"projectIndex" : 5
 				},
@@ -364,7 +364,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "svg2png::@6d912588806cae862c44",
-					"jsonFile" : "target-svg2png-Debug-6b956a253e230fafb4cf.json",
+					"jsonFile" : "target-svg2png-Debug-90dc8a64d91988e54d19.json",
 					"name" : "svg2png",
 					"projectIndex" : 5
 				},
@@ -642,14 +642,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-c2c076e245ec60d65440.json",
+					"jsonFile" : "target-ALL_BUILD-Release-5c8bfaa7eaffb6f811f9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-ALL_BUILD-Release-58107abfc38165324d5e.json",
+					"jsonFile" : "target-ALL_BUILD-Release-fa0f063ac9bbebec127c.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 5
 				},
@@ -677,7 +677,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
-					"jsonFile" : "target-SDL3_ttf-shared-Release-b9f08040567a86aa304b.json",
+					"jsonFile" : "target-SDL3_ttf-shared-Release-4aa00c4de1b0271824e7.json",
 					"name" : "SDL3_ttf-shared",
 					"projectIndex" : 2
 				},
@@ -698,14 +698,14 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "camera2png::@6d912588806cae862c44",
-					"jsonFile" : "target-camera2png-Release-e6b5c4f0ec0e85e67af7.json",
+					"jsonFile" : "target-camera2png-Release-566a1bfd21cc8823fbf3.json",
 					"name" : "camera2png",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "emoji2png::@6d912588806cae862c44",
-					"jsonFile" : "target-emoji2png-Release-ca9296baf37e14b2811e.json",
+					"jsonFile" : "target-emoji2png-Release-98d7220b1903724741d3.json",
 					"name" : "emoji2png",
 					"projectIndex" : 5
 				},
@@ -726,7 +726,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-plutosvg-Release-3f0032aef40e55431c47.json",
+					"jsonFile" : "target-plutosvg-Release-0babf25aaa9c9eb51340.json",
 					"name" : "plutosvg",
 					"projectIndex" : 5
 				},
@@ -740,7 +740,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "svg2png::@6d912588806cae862c44",
-					"jsonFile" : "target-svg2png-Release-8eaf6a75e8f6a492ae7d.json",
+					"jsonFile" : "target-svg2png-Release-989e37af4ee6aeaed6c7.json",
 					"name" : "svg2png",
 					"projectIndex" : 5
 				},
@@ -1018,14 +1018,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-c2c076e245ec60d65440.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-5c8bfaa7eaffb6f811f9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-58107abfc38165324d5e.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-fa0f063ac9bbebec127c.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 5
 				},
@@ -1053,7 +1053,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
-					"jsonFile" : "target-SDL3_ttf-shared-MinSizeRel-f3c19b65ff7715c6a48d.json",
+					"jsonFile" : "target-SDL3_ttf-shared-MinSizeRel-5eb372b36b5579216255.json",
 					"name" : "SDL3_ttf-shared",
 					"projectIndex" : 2
 				},
@@ -1074,14 +1074,14 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "camera2png::@6d912588806cae862c44",
-					"jsonFile" : "target-camera2png-MinSizeRel-3b1cfd319a725375a0f1.json",
+					"jsonFile" : "target-camera2png-MinSizeRel-8074b14e3b23abb77955.json",
 					"name" : "camera2png",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "emoji2png::@6d912588806cae862c44",
-					"jsonFile" : "target-emoji2png-MinSizeRel-88267e2ac83dab8f41cd.json",
+					"jsonFile" : "target-emoji2png-MinSizeRel-3230f8b6d94982976bc7.json",
 					"name" : "emoji2png",
 					"projectIndex" : 5
 				},
@@ -1102,7 +1102,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-plutosvg-MinSizeRel-5f3f917ea7b1e35d0e12.json",
+					"jsonFile" : "target-plutosvg-MinSizeRel-dc1bd3dab1a0d12f1fb2.json",
 					"name" : "plutosvg",
 					"projectIndex" : 5
 				},
@@ -1116,7 +1116,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "svg2png::@6d912588806cae862c44",
-					"jsonFile" : "target-svg2png-MinSizeRel-7252327eeb3fa76a6f82.json",
+					"jsonFile" : "target-svg2png-MinSizeRel-02ff72ffd9b10d58b4e9.json",
 					"name" : "svg2png",
 					"projectIndex" : 5
 				},
@@ -1394,14 +1394,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-c2c076e245ec60d65440.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-5c8bfaa7eaffb6f811f9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-58107abfc38165324d5e.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-fa0f063ac9bbebec127c.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 5
 				},
@@ -1429,7 +1429,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
-					"jsonFile" : "target-SDL3_ttf-shared-RelWithDebInfo-b7048f26cb6c40815284.json",
+					"jsonFile" : "target-SDL3_ttf-shared-RelWithDebInfo-c95ef15ef45bdcbd9f3b.json",
 					"name" : "SDL3_ttf-shared",
 					"projectIndex" : 2
 				},
@@ -1450,14 +1450,14 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "camera2png::@6d912588806cae862c44",
-					"jsonFile" : "target-camera2png-RelWithDebInfo-0353f90eee2984e7a314.json",
+					"jsonFile" : "target-camera2png-RelWithDebInfo-f0baa0ee672b32f0b7ff.json",
 					"name" : "camera2png",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "emoji2png::@6d912588806cae862c44",
-					"jsonFile" : "target-emoji2png-RelWithDebInfo-6374229cfea91ea9980f.json",
+					"jsonFile" : "target-emoji2png-RelWithDebInfo-a464c70f16a70ab3ed5f.json",
 					"name" : "emoji2png",
 					"projectIndex" : 5
 				},
@@ -1478,7 +1478,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
-					"jsonFile" : "target-plutosvg-RelWithDebInfo-980ea6fc24e269d80ff0.json",
+					"jsonFile" : "target-plutosvg-RelWithDebInfo-18c1d4fdb8d0963e2c2a.json",
 					"name" : "plutosvg",
 					"projectIndex" : 5
 				},
@@ -1492,7 +1492,7 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "svg2png::@6d912588806cae862c44",
-					"jsonFile" : "target-svg2png-RelWithDebInfo-e7ecbe03f34270848683.json",
+					"jsonFile" : "target-svg2png-RelWithDebInfo-2a6b44285eaadf74d53b.json",
 					"name" : "svg2png",
 					"projectIndex" : 5
 				},

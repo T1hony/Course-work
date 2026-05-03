@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/sdl3_ttf-build/external/plutosvg/examples/Debug/emoji2png.exe"
+			"path" : "_deps/sdl3_ttf-build/external/plutosvg/examples/RelWithDebInfo/svg2png.exe"
 		},
 		{
-			"path" : "_deps/sdl3_ttf-build/external/plutosvg/examples/Debug/emoji2png.pdb"
+			"path" : "_deps/sdl3_ttf-build/external/plutosvg/examples/RelWithDebInfo/svg2png.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -29,13 +29,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 13,
+				"line" : 9,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 14,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -61,7 +61,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /O2 /Ob1 /DNDEBUG -MD"
 				}
 			],
 			"defines" : 
@@ -116,11 +116,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
 		},
 		{
-			"backtrace" : 2,
-			"id" : "freetype::@dd7d92cf046c6897cc99"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
@@ -128,16 +128,16 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
+			"id" : "freetype::@dd7d92cf046c6897cc99"
 		}
 	],
-	"id" : "emoji2png::@6d912588806cae862c44",
+	"id" : "svg2png::@6d912588806cae862c44",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd",
+				"fragment" : "/DWIN32 /D_WINDOWS /Zi /O2 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
@@ -146,17 +146,17 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\Debug\\plutosvg.lib",
+				"fragment" : "..\\RelWithDebInfo\\plutosvg.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "..\\..\\plutovg\\Debug\\plutovg.lib",
+				"fragment" : "..\\..\\plutovg\\RelWithDebInfo\\plutovg.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "..\\..\\freetype\\Debug\\freetyped.lib",
+				"fragment" : "..\\..\\freetype\\RelWithDebInfo\\freetype.lib",
 				"role" : "libraries"
 			},
 			{
@@ -166,8 +166,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "emoji2png",
-	"nameOnDisk" : "emoji2png.exe",
+	"name" : "svg2png",
+	"nameOnDisk" : "svg2png.exe",
 	"paths" : 
 	{
 		"build" : "_deps/sdl3_ttf-build/external/plutosvg/examples",
@@ -188,7 +188,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples/emoji2png.c",
+			"path" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples/svg2png.c",
 			"sourceGroupIndex" : 0
 		}
 	],

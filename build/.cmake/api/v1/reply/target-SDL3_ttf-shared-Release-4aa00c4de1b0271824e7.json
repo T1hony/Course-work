@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/sdl3_ttf-build/RelWithDebInfo/SDL3_ttf.dll"
+			"path" : "_deps/sdl3_ttf-build/Release/SDL3_ttf.dll"
 		},
 		{
-			"path" : "_deps/sdl3_ttf-build/RelWithDebInfo/SDL3_ttf.lib"
+			"path" : "_deps/sdl3_ttf-build/Release/SDL3_ttf.lib"
 		},
 		{
-			"path" : "_deps/sdl3_ttf-build/RelWithDebInfo/SDL3_ttf.pdb"
+			"path" : "_deps/sdl3_ttf-build/Release/SDL3_ttf.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -125,7 +125,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /Zi /O2 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD"
 				},
 				{
 					"backtrace" : 8,
@@ -306,6 +306,10 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 4,
+			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
+		},
+		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -313,16 +317,12 @@
 			"id" : "SDL3-shared::@405c074760d2f6728126"
 		},
 		{
-			"backtrace" : 3,
-			"id" : "freetype::@dd7d92cf046c6897cc99"
-		},
-		{
 			"backtrace" : 4,
 			"id" : "plutovg::@8b2c8d8d740251e3cd60"
 		},
 		{
-			"backtrace" : 4,
-			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
+			"backtrace" : 3,
+			"id" : "freetype::@dd7d92cf046c6897cc99"
 		}
 	],
 	"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
@@ -331,32 +331,32 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "..\\sdl3-build\\RelWithDebInfo\\SDL3.lib",
+				"fragment" : "..\\sdl3-build\\Release\\SDL3.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "external\\freetype\\RelWithDebInfo\\freetype.lib",
+				"fragment" : "external\\freetype\\Release\\freetype.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "external\\plutosvg\\RelWithDebInfo\\plutosvg.lib",
+				"fragment" : "external\\plutosvg\\Release\\plutosvg.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "external\\freetype\\RelWithDebInfo\\freetype.lib",
+				"fragment" : "external\\freetype\\Release\\freetype.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "external\\plutovg\\RelWithDebInfo\\plutovg.lib",
+				"fragment" : "external\\plutovg\\Release\\plutovg.lib",
 				"role" : "libraries"
 			},
 			{

@@ -116,11 +116,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
 		},
 		{
-			"backtrace" : 2,
-			"id" : "freetype::@dd7d92cf046c6897cc99"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
@@ -128,7 +128,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
+			"id" : "freetype::@dd7d92cf046c6897cc99"
 		}
 	],
 	"id" : "emoji2png::@6d912588806cae862c44",

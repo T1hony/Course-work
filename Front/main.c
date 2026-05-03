@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     SDL_Window* win = SDL_CreateWindow("Infinite Gomoku - Polytech Edition", 800, 600, 0);
     SDL_Renderer* r = SDL_CreateRenderer(win, NULL);
 
-    gui_init(r);
+    gui_init(win, r);
     init_game();
     
     if (load_game("save.txt")) {
@@ -87,9 +87,32 @@ int main(int argc, char* argv[])
             }
         }
 
-        if (last_state == GUI_SETTINGS && state == GUI_GAME) {
+        if ((last_state == GUI_SETTINGS || last_state == GUI_NAME_INPUT) && state == GUI_GAME) {
             current = CELL_X;
             write_log("--- Начало новой партии ---");
+            
+            PlayerInfo p1, p2;
+            char log_msg[128];
+            
+            p1.symbol = CELL_X;
+            p2.symbol = CELL_O;
+            
+            if (mode == MODE_PVP) {
+                p1.type = PLAYER_HUMAN; strcpy(p1.info.nickname, "Игрок 1");
+                p2.type = PLAYER_HUMAN; strcpy(p2.info.nickname, "Игрок 2");
+                sprintf(log_msg, "Участники: %s (X) против %s (O)", p1.info.nickname, p2.info.nickname);
+            } 
+            else if (mode == MODE_PVE) {
+                p1.type = PLAYER_HUMAN; strcpy(p1.info.nickname, "Человек");
+                p2.type = PLAYER_BOT;   p2.info.difficulty = diff;
+                sprintf(log_msg, "Участники: %s (X) против Бота (O, сложность %d)", p1.info.nickname, p2.info.difficulty);
+            } 
+            else if (mode == MODE_EVE) {
+                p1.type = PLAYER_BOT;   p1.info.difficulty = diff;
+                p2.type = PLAYER_BOT;   p2.info.difficulty = diff;
+                sprintf(log_msg, "Участники: Бот (X) против Бота (O), сложность %d", diff);
+            }
+            write_log(log_msg);
             
             if (mode == MODE_EVE) {
                 make_move(0, 0, CELL_X);
@@ -97,7 +120,6 @@ int main(int argc, char* argv[])
                 current = CELL_O;
             }
         }
-        
         last_state = state;
 
         if(state == GUI_GAME && win_status == GAME_CONTINUES)

@@ -1,6 +1,7 @@
 #include "gui.h"
 #include <SDL3_ttf/SDL_ttf.h>
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
 #define CELL 40
@@ -12,6 +13,12 @@ static int cam_x = 0, cam_y = 0;
 static int bot_x = 999999;
 static int bot_y = 999999;
 
+static char player1_name[32] = "Игрок 1";
+static char player2_name[32] = "Игрок 2";
+static int entering_first = 1;
+
+static SDL_Window* win_ptr = NULL;
+
 int get_text_width(const char* text) {
     if (!font || !text)  return 0;
     int w, h;
@@ -19,7 +26,8 @@ int get_text_width(const char* text) {
     return w;
 }
 
-void gui_init(SDL_Renderer* renderer) {
+void gui_init(SDL_Window* window, SDL_Renderer* renderer) {
+    win_ptr = window;
     r = renderer;
     if (!TTF_Init()) {
         printf("Ошибка TTF_Init: %s\n", SDL_GetError());
@@ -58,6 +66,31 @@ void draw_circle(SDL_Renderer* renderer, int center_x, int center_y, int radius)
 }
 
 void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficulty* diff) {
+    if (*state == GUI_NAME_INPUT) {
+        if (e->type == SDL_EVENT_TEXT_INPUT) {
+            char* target = entering_first ? player1_name : player2_name;
+            if (strlen(target) < 31) strcat(target, e->text.text);
+        }
+        if (e->type == SDL_EVENT_KEY_DOWN) {
+            char* target = entering_first ? player1_name : player2_name;
+            if (e->key.key == SDLK_BACKSPACE && strlen(target) > 0) {
+                target[strlen(target) - 1] = '\0';
+            }
+            if (e->key.key == SDLK_RETURN) { 
+                if (entering_first) {
+                    entering_first = 0; 
+                } else {
+                    init_game();
+                    cam_x = 400 - (CELL / 2); 
+                    cam_y = 300 - (CELL / 2);
+                    *state = GUI_GAME;
+                    SDL_StopTextInput(win_ptr);
+                }
+            }
+        }
+        return;
+    }
+
     if (e->type == SDL_EVENT_KEY_DOWN) {
         switch (e->key.key) {
             case SDLK_W: cam_y += 20; break;
@@ -86,12 +119,27 @@ void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficul
                 if (x > 300 && x < 450) *diff = BOT_HARD;
                 if (x > 500 && x < 650) *diff = BOT_IMPOSSIBLE;
             }
+            
             int start_y = (*mode == MODE_PVP) ? 300 : 400;
             if (y > start_y && y < start_y + 60 && x > 300 && x < 500) {
-                init_game();
-                cam_x = 400 - (CELL / 2); 
-                cam_y = 300 - (CELL / 2);
-                *state = GUI_GAME;
+                if (*mode == MODE_PVP) {
+                    *state = GUI_NAME_INPUT;
+                    entering_first = 1;
+                    player1_name[0] = '\0';
+                    player2_name[0] = '\0';
+                    SDL_StartTextInput(win_ptr);
+                } 
+                else {
+                    if (*mode == MODE_PVE) {
+                        gui_set_player_names("Человек", "Бот");
+                    } else if (*mode == MODE_EVE) {
+                        gui_set_player_names("Бот (X)", "Бот (O)");
+                    }
+                    init_game();
+                    cam_x = 400 - (CELL / 2); 
+                    cam_y = 300 - (CELL / 2);
+                    *state = GUI_GAME;
+                }
             }
         }
     }
@@ -252,21 +300,48 @@ static void draw_about() {
     draw_text(esc_msg, esc_x, 530, w);
 }
 
+void gui_set_player_names(const char* n1, const char* n2) {
+    strncpy(player1_name, n1, 31);
+    strncpy(player2_name, n2, 31);
+}
+
+static void draw_name_input() {
+    SDL_Color white = {255, 255, 255, 255};
+    SDL_Color green = {0, 255, 0, 255};
+    SDL_Color gray = {150, 150, 150, 255};
+
+    draw_text("ВВОД ИМЕН ИГРОКОВ", 280, 50, white);
+    
+    draw_text("Игрок 1 (X):", 100, 150, entering_first ? green : white);
+    draw_text(player1_name, 300, 150, white);
+    
+    draw_text("Игрок 2 (O):", 100, 250, !entering_first ? green : white);
+    draw_text(player2_name, 300, 250, white);
+    
+    draw_text("Нажмите ENTER, чтобы подтвердить", 220, 400, white);
+    draw_text("Нажмите BACKSPACE, чтобы стереть", 220, 450, gray);
+}
+
 void gui_draw(GuiState state, GameStatus win_status, GameMode mode, BotDifficulty diff) {
     switch (state) {
         case GUI_MENU: draw_menu(); break;
         case GUI_SETTINGS: draw_settings(mode, diff); break;
+        case GUI_NAME_INPUT: draw_name_input(); break;
         case GUI_HELP: draw_help(); break;
         case GUI_ABOUT: draw_about(); break;
         case GUI_GAME: draw_grid(); draw_marks(); break;
         case GUI_WIN_SCREEN:
-            draw_grid(); draw_marks();
+            draw_grid(); 
+            draw_marks();
             SDL_SetRenderDrawBlendMode(r, SDL_BLENDMODE_BLEND);
             SDL_SetRenderDrawColor(r, 0, 0, 0, 180);
             SDL_FRect f = {0, 0, 800, 600};
             SDL_RenderFillRect(r, &f);
             SDL_Color gold = {255, 215, 0, 255};
-            draw_text(win_status == WIN_X ? "ПОБЕДИЛИ КРЕСТИКИ!" : "ПОБЕДИЛИ НОЛИКИ!", 260, 250, gold);
+            char win_msg[64];
+            snprintf(win_msg, 64, "ПОБЕДИТЕЛЬ: %s!", (win_status == WIN_X) ? player1_name : player2_name);
+            int tw = get_text_width(win_msg);
+            draw_text(win_msg, 400 - tw / 2, 250, gold);
             draw_text("ESC - в меню", 335, 320, gold);
             break;
     }

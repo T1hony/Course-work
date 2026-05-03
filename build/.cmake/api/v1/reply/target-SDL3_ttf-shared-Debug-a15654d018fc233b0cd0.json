@@ -306,6 +306,10 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 4,
+			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
+		},
+		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -313,16 +317,12 @@
 			"id" : "SDL3-shared::@405c074760d2f6728126"
 		},
 		{
-			"backtrace" : 3,
-			"id" : "freetype::@dd7d92cf046c6897cc99"
-		},
-		{
 			"backtrace" : 4,
 			"id" : "plutovg::@8b2c8d8d740251e3cd60"
 		},
 		{
-			"backtrace" : 4,
-			"id" : "plutosvg::@b8fa20df6ad9dc4253d2"
+			"backtrace" : 3,
+			"id" : "freetype::@dd7d92cf046c6897cc99"
 		}
 	],
 	"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
