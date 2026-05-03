@@ -1,0 +1,14 @@
+# Target labels
+ sdl3-populate
+# Source files and their labels
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/sdl3-populate
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/53deb17fe67bf13e5ee57b5980412e86/sdl3-populate.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/a9714d9a0ccc99a38956a45637d85ba9/sdl3-populate-complete.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-build.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-configure.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-download.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-install.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-mkdir.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-patch.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-test.rule
+C:/Yandex.Disk/Course work/build/_deps/sdl3-subbuild/CMakeFiles/08e7597894fe7238472468afc2fb82d5/sdl3-populate-update.rule

@@ -1,0 +1,1520 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"build" : "_deps/sdl3-build",
+					"jsonFile" : "directory-_deps.sdl3-build-Debug-71c8475db73c9f5b84dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/sdl3-src",
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build-Debug-034e18f4b1f365bcb9c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "build/_deps/sdl3_ttf-src",
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/freetype",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.freetype-Debug-391d8b19b2ead6e3a1fe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "build/_deps/sdl3_ttf-src/external/freetype",
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutovg",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutovg-Debug-d00c375ea00a8362d359.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutovg",
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg",
+					"childIndexes" : 
+					[
+						6
+					],
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg-Debug-dd56d8bd1ca373c55683.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg",
+					"targetIndexes" : 
+					[
+						4,
+						15
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg/examples",
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg.examples-Debug-73bd6188eb34783423fe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples",
+					"targetIndexes" : 
+					[
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InfiniteGomoku",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SDL3_ttf",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "freetype",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "plutovg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "plutosvg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4,
+						11,
+						12,
+						15,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-ALL_BUILD-Debug-e2351c262052d418ca2c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@405c074760d2f6728126",
+					"jsonFile" : "target-ALL_BUILD-Debug-ff81fbf4d7fe58be8947.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-ALL_BUILD-Debug-6e92c5614471100d4c6a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-c2c076e245ec60d65440.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-ALL_BUILD-Debug-df94e625867aacd1d7c3.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-ALL_BUILD-Debug-02c8e0bb6195ab9a77d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3-shared::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3-shared-Debug-0a4fa000fab0652c2e43.json",
+					"name" : "SDL3-shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3_test::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3_test-Debug-67faedc9fca4c0d9fac1.json",
+					"name" : "SDL3_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-SDL3_ttf-shared-Debug-7125e3c1c61af36ca907.json",
+					"name" : "SDL3_ttf-shared",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL_uclibc::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL_uclibc-Debug-8dfee30b7e57cfd61ef8.json",
+					"name" : "SDL_uclibc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-e1c9f4508c42f5ddcb3b.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "camera2png::@6d912588806cae862c44",
+					"jsonFile" : "target-camera2png-Debug-c95c08d7bf4f56156555.json",
+					"name" : "camera2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "emoji2png::@6d912588806cae862c44",
+					"jsonFile" : "target-emoji2png-Debug-7fa3a3f13c0beacd64cd.json",
+					"name" : "emoji2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "freetype::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-freetype-Debug-9660a614b8da0d413cc6.json",
+					"name" : "freetype",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game-Debug-5ebfb0073e0dfd8632d7.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-plutosvg-Debug-a2d338270c980f520a49.json",
+					"name" : "plutosvg",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "plutovg::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-plutovg-Debug-66f5a176a49a2f6ba138.json",
+					"name" : "plutovg",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "svg2png::@6d912588806cae862c44",
+					"jsonFile" : "target-svg2png-Debug-6b956a253e230fafb4cf.json",
+					"name" : "svg2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@405c074760d2f6728126",
+					"jsonFile" : "target-uninstall-Debug-ecbe926bf5b4a0095eaa.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"build" : "_deps/sdl3-build",
+					"jsonFile" : "directory-_deps.sdl3-build-Release-71c8475db73c9f5b84dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/sdl3-src",
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build-Release-034e18f4b1f365bcb9c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "build/_deps/sdl3_ttf-src",
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/freetype",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.freetype-Release-7e8a40c4eab2ce7c906d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "build/_deps/sdl3_ttf-src/external/freetype",
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutovg",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutovg-Release-4ac33f60388e72a33add.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutovg",
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg",
+					"childIndexes" : 
+					[
+						6
+					],
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg-Release-dd56d8bd1ca373c55683.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg",
+					"targetIndexes" : 
+					[
+						4,
+						15
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg/examples",
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg.examples-Release-73bd6188eb34783423fe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples",
+					"targetIndexes" : 
+					[
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InfiniteGomoku",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SDL3_ttf",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "freetype",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "plutovg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "plutosvg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4,
+						11,
+						12,
+						15,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-ALL_BUILD-Release-e2351c262052d418ca2c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@405c074760d2f6728126",
+					"jsonFile" : "target-ALL_BUILD-Release-ff81fbf4d7fe58be8947.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-ALL_BUILD-Release-6e92c5614471100d4c6a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-c2c076e245ec60d65440.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-ALL_BUILD-Release-df94e625867aacd1d7c3.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-ALL_BUILD-Release-02c8e0bb6195ab9a77d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3-shared::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3-shared-Release-5f7eab960c8bc6abeeb4.json",
+					"name" : "SDL3-shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3_test::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3_test-Release-784ff7af9b8eae664b2e.json",
+					"name" : "SDL3_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-SDL3_ttf-shared-Release-b9f08040567a86aa304b.json",
+					"name" : "SDL3_ttf-shared",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL_uclibc::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL_uclibc-Release-27c0110c0c7a15f24fea.json",
+					"name" : "SDL_uclibc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-e1c9f4508c42f5ddcb3b.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "camera2png::@6d912588806cae862c44",
+					"jsonFile" : "target-camera2png-Release-e6b5c4f0ec0e85e67af7.json",
+					"name" : "camera2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "emoji2png::@6d912588806cae862c44",
+					"jsonFile" : "target-emoji2png-Release-ca9296baf37e14b2811e.json",
+					"name" : "emoji2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "freetype::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-freetype-Release-071a3296df9d26a864fb.json",
+					"name" : "freetype",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game-Release-f7e3e3a49d57a436605b.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-plutosvg-Release-3f0032aef40e55431c47.json",
+					"name" : "plutosvg",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "plutovg::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-plutovg-Release-ad2205dde9dafaafbc9c.json",
+					"name" : "plutovg",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "svg2png::@6d912588806cae862c44",
+					"jsonFile" : "target-svg2png-Release-8eaf6a75e8f6a492ae7d.json",
+					"name" : "svg2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@405c074760d2f6728126",
+					"jsonFile" : "target-uninstall-Release-ecbe926bf5b4a0095eaa.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"build" : "_deps/sdl3-build",
+					"jsonFile" : "directory-_deps.sdl3-build-MinSizeRel-71c8475db73c9f5b84dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/sdl3-src",
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build-MinSizeRel-034e18f4b1f365bcb9c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "build/_deps/sdl3_ttf-src",
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/freetype",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.freetype-MinSizeRel-5cebb16d07d81d90d1e8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "build/_deps/sdl3_ttf-src/external/freetype",
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutovg",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutovg-MinSizeRel-b19fd079ff39f8be0d20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutovg",
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg",
+					"childIndexes" : 
+					[
+						6
+					],
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg-MinSizeRel-dd56d8bd1ca373c55683.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg",
+					"targetIndexes" : 
+					[
+						4,
+						15
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg/examples",
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg.examples-MinSizeRel-73bd6188eb34783423fe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples",
+					"targetIndexes" : 
+					[
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InfiniteGomoku",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SDL3_ttf",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "freetype",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "plutovg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "plutosvg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4,
+						11,
+						12,
+						15,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-e2351c262052d418ca2c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@405c074760d2f6728126",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-ff81fbf4d7fe58be8947.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-6e92c5614471100d4c6a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-c2c076e245ec60d65440.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-df94e625867aacd1d7c3.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-02c8e0bb6195ab9a77d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3-shared::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3-shared-MinSizeRel-7784122e2e932959deb1.json",
+					"name" : "SDL3-shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3_test::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3_test-MinSizeRel-acf69c4901fb718cee10.json",
+					"name" : "SDL3_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-SDL3_ttf-shared-MinSizeRel-f3c19b65ff7715c6a48d.json",
+					"name" : "SDL3_ttf-shared",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL_uclibc::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL_uclibc-MinSizeRel-e0a5d9decd0e0409c5a9.json",
+					"name" : "SDL_uclibc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-e1c9f4508c42f5ddcb3b.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "camera2png::@6d912588806cae862c44",
+					"jsonFile" : "target-camera2png-MinSizeRel-3b1cfd319a725375a0f1.json",
+					"name" : "camera2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "emoji2png::@6d912588806cae862c44",
+					"jsonFile" : "target-emoji2png-MinSizeRel-88267e2ac83dab8f41cd.json",
+					"name" : "emoji2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "freetype::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-freetype-MinSizeRel-a7407ef61feef77785a2.json",
+					"name" : "freetype",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game-MinSizeRel-867bbb6787d998d3de51.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-plutosvg-MinSizeRel-5f3f917ea7b1e35d0e12.json",
+					"name" : "plutosvg",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "plutovg::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-plutovg-MinSizeRel-bcd98aff6c27341e6ce1.json",
+					"name" : "plutovg",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "svg2png::@6d912588806cae862c44",
+					"jsonFile" : "target-svg2png-MinSizeRel-7252327eeb3fa76a6f82.json",
+					"name" : "svg2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@405c074760d2f6728126",
+					"jsonFile" : "target-uninstall-MinSizeRel-ecbe926bf5b4a0095eaa.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"build" : "_deps/sdl3-build",
+					"jsonFile" : "directory-_deps.sdl3-build-RelWithDebInfo-71c8475db73c9f5b84dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/sdl3-src",
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build-RelWithDebInfo-034e18f4b1f365bcb9c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "build/_deps/sdl3_ttf-src",
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/freetype",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.freetype-RelWithDebInfo-581e401402f0f41b1896.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "build/_deps/sdl3_ttf-src/external/freetype",
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutovg",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutovg-RelWithDebInfo-38b42327c393fb557487.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutovg",
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg",
+					"childIndexes" : 
+					[
+						6
+					],
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg-RelWithDebInfo-dd56d8bd1ca373c55683.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg",
+					"targetIndexes" : 
+					[
+						4,
+						15
+					]
+				},
+				{
+					"build" : "_deps/sdl3_ttf-build/external/plutosvg/examples",
+					"jsonFile" : "directory-_deps.sdl3_ttf-build.external.plutosvg.examples-RelWithDebInfo-73bd6188eb34783423fe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 5,
+					"source" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples",
+					"targetIndexes" : 
+					[
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "InfiniteGomoku",
+					"targetIndexes" : 
+					[
+						3,
+						10,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						6,
+						7,
+						9,
+						18
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SDL3_ttf",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "freetype",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "plutovg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						2,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "plutosvg",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4,
+						11,
+						12,
+						15,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-e2351c262052d418ca2c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@405c074760d2f6728126",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-ff81fbf4d7fe58be8947.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-6e92c5614471100d4c6a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-c2c076e245ec60d65440.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_BUILD::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-df94e625867aacd1d7c3.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-02c8e0bb6195ab9a77d9.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3-shared::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3-shared-RelWithDebInfo-e9049ee3fee5de6c49e8.json",
+					"name" : "SDL3-shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3_test::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL3_test-RelWithDebInfo-d56bfb7440673598d04a.json",
+					"name" : "SDL3_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "SDL3_ttf-shared::@a7ebff90f4ae46fb890e",
+					"jsonFile" : "target-SDL3_ttf-shared-RelWithDebInfo-b7048f26cb6c40815284.json",
+					"name" : "SDL3_ttf-shared",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL_uclibc::@405c074760d2f6728126",
+					"jsonFile" : "target-SDL_uclibc-RelWithDebInfo-4b69d6f802d0c4b21590.json",
+					"name" : "SDL_uclibc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-e1c9f4508c42f5ddcb3b.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "camera2png::@6d912588806cae862c44",
+					"jsonFile" : "target-camera2png-RelWithDebInfo-0353f90eee2984e7a314.json",
+					"name" : "camera2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "emoji2png::@6d912588806cae862c44",
+					"jsonFile" : "target-emoji2png-RelWithDebInfo-6374229cfea91ea9980f.json",
+					"name" : "emoji2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "freetype::@dd7d92cf046c6897cc99",
+					"jsonFile" : "target-freetype-RelWithDebInfo-ae63d541a6a67c5879a4.json",
+					"name" : "freetype",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game-RelWithDebInfo-d5e740b5c581ccc58527.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "plutosvg::@b8fa20df6ad9dc4253d2",
+					"jsonFile" : "target-plutosvg-RelWithDebInfo-980ea6fc24e269d80ff0.json",
+					"name" : "plutosvg",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "plutovg::@8b2c8d8d740251e3cd60",
+					"jsonFile" : "target-plutovg-RelWithDebInfo-7c1191d00d683342fbbc.json",
+					"name" : "plutovg",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "svg2png::@6d912588806cae862c44",
+					"jsonFile" : "target-svg2png-RelWithDebInfo-e7ecbe03f34270848683.json",
+					"name" : "svg2png",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@405c074760d2f6728126",
+					"jsonFile" : "target-uninstall-RelWithDebInfo-ecbe926bf5b4a0095eaa.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Yandex.Disk/Course work/build",
+		"source" : "C:/Yandex.Disk/Course work"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

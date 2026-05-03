@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/sdl3_ttf-build/external/plutosvg/examples",
+		"source" : "build/_deps/sdl3_ttf-src/external/plutosvg/examples"
+	}
+}

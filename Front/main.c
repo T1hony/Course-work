@@ -1,0 +1,169 @@
+#include <SDL3/SDL.h>
+#include "game_logic.h"
+#include "gui.h"
+#include <stdio.h>
+#include <string.h>
+
+// --- Функция для ведения логов (Требование ТЗ) ---
+void write_log(const char* msg) {
+    FILE* f = fopen("game.log", "a");
+    if (f) {
+        fprintf(f, "%s\n", msg);
+        fclose(f);
+    }
+}
+
+int main(int argc, char* argv[])
+{
+    // --- Обработка --help (Требование ТЗ) ---
+    if (argc > 1 && strcmp(argv[1], "--help") == 0) {
+        printf("=========================================\n");
+        printf(" Бесконечные Крестики-Нолики (Гомоку)\n");
+        printf("=========================================\n");
+        printf(" Использование: game.exe [параметры]\n");
+        printf(" Параметры:\n");
+        printf("   --help    Показать эту справку\n");
+        printf(" Управление:\n");
+        printf("   ЛКМ       - Поставить знак\n");
+        printf("   W,A,S,D   - Перемещение камеры\n");
+        printf("   ESC       - Выход в меню\n");
+        printf("=========================================\n");
+        return 0;
+    }
+
+    write_log("--- Запуск программы ---");
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) return 1;
+
+    SDL_Window* win = SDL_CreateWindow("Infinite Gomoku - Polytech Edition", 800, 600, 0);
+    SDL_Renderer* r = SDL_CreateRenderer(win, NULL);
+
+    gui_init(r);
+    init_game();
+    
+    // Загрузка последнего сохранения
+    if (load_game("save.txt")) {
+        write_log("Сохранение успешно загружено");
+    } else {
+        write_log("Создана новая игровая сессия");
+    }
+
+    // Инициализация переменных состояния
+    GuiState state = GUI_MENU;
+    GuiState last_state = GUI_MENU; // Для отслеживания переходов между экранами
+    GameMode mode = MODE_PVE;
+    BotDifficulty diff = BOT_HARD;
+    CellState current = CELL_X;
+    GameStatus win_status = GAME_CONTINUES;
+
+    SDL_Event e;
+    int run = 1;
+
+    // --- Главный цикл программы ---
+    while(run)
+    {
+        while(SDL_PollEvent(&e))
+        {
+            if(e.type == SDL_EVENT_QUIT) run = 0;
+
+            // Запоминаем состояние ДО обработки события для защиты от "прострела" клика
+            GuiState state_before_event = state;
+
+            // Обработка интерфейса (кнопки, меню, настройки)
+            gui_handle_event(&e, &state, &mode, &diff);
+
+            // Обработка клика ИГРОКА
+            if(e.type == SDL_EVENT_MOUSE_BUTTON_DOWN && 
+               state == GUI_GAME && 
+               state_before_event == GUI_GAME && // Проверка, что мы уже были в игре до клика
+               mode != MODE_EVE &&               // В режиме Бот-Бот игрок не ходит
+               win_status == GAME_CONTINUES)
+            {
+                // Даем ходить человеку только в PvP или в PvE, когда очередь крестика
+                if (mode == MODE_PVP || (mode == MODE_PVE && current == CELL_X)) {
+                    Move m = gui_get_cell_from_mouse(e.button.x, e.button.y);
+                    if(make_move(m.x, m.y, current) == MOVE_SUCCESS) {
+                        write_log("Игрок сделал ход");
+                        win_status = check_win(m.x, m.y);
+                        current = (current == CELL_X) ? CELL_O : CELL_X;
+                    }
+                }
+            }
+
+            // Выход с экрана победы в меню
+            if(e.type == SDL_EVENT_KEY_DOWN && e.key.key == SDLK_ESCAPE && state == GUI_WIN_SCREEN) {
+                state = GUI_MENU;
+                win_status = GAME_CONTINUES;
+                write_log("Возврат в главное меню");
+            }
+        }
+
+        // --- ЛОГИКА ИНИЦИАЛИЗАЦИИ НОВОЙ ПАРТИИ ---
+        if (last_state == GUI_SETTINGS && state == GUI_GAME) {
+            current = CELL_X; // Всегда начинаем с крестиков
+            write_log("--- Начало новой партии ---");
+            
+            // "Спасательный круг" для ботов: ставим первый крестик в центр (0,0),
+            // чтобы на пустом бесконечном поле ботам было за что зацепиться
+            if (mode == MODE_EVE) {
+                make_move(0, 0, CELL_X);
+                gui_set_bot_move(0, 0);
+                current = CELL_O; // Очередь переходит к ноликам (следующему боту)
+            }
+        }
+        last_state = state;
+
+        // --- ЛОГИКА РАБОТЫ БОТОВ ---
+        if(state == GUI_GAME && win_status == GAME_CONTINUES)
+        {
+            // Режим Игрок против Бота (Бот за Ноликов)
+            if(mode == MODE_PVE && current == CELL_O)
+            {
+                Move b = bot_make_move(CELL_O, diff);
+                if (make_move(b.x, b.y, CELL_O) == MOVE_SUCCESS) {
+                    gui_set_bot_move(b.x, b.y);
+                    write_log("Бот сделал ход");
+                    win_status = check_win(b.x, b.y);
+                    current = CELL_X;
+                }
+            }
+
+            // Режим Бот против Бота
+            if(mode == MODE_EVE)
+            {
+                Move b = bot_make_move(current, diff);
+                if (make_move(b.x, b.y, current) == MOVE_SUCCESS) {
+                    gui_set_bot_move(b.x, b.y);
+                    win_status = check_win(b.x, b.y);
+                    current = (current == CELL_X) ? CELL_O : CELL_X;
+                }
+                SDL_Delay(200); // Задержка для визуализации ходов
+            }
+        }
+
+        // Проверка завершения игры и переход на экран победы
+        if (win_status != GAME_CONTINUES && state != GUI_WIN_SCREEN) {
+            write_log(win_status == WIN_X ? "Результат: Победа Крестиков" : "Результат: Победа Ноликов");
+            state = GUI_WIN_SCREEN; 
+        }
+
+        // --- Отрисовка кадра ---
+        SDL_SetRenderDrawColor(r, 0, 0, 0, 255); // Черный фон
+        SDL_RenderClear(r);
+        
+        // Отрисовка текущего экрана (через gui.c)
+        gui_draw(state, win_status, mode, diff);
+        
+        SDL_RenderPresent(r);
+    }
+
+    // --- Завершение работы ---
+    save_game("save.txt");
+    write_log("Игра сохранена. Завершение работы.");
+
+    cleanup_game(); // Очистка памяти игрового поля
+    SDL_DestroyRenderer(r);
+    SDL_DestroyWindow(win);
+    SDL_Quit();
+    
+    return 0;
+}

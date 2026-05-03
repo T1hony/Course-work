@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-src\external\plutosvg\source\plutosvg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-src\external\plutosvg\source\plutosvg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-src\external\plutosvg\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D586A8E4-1A03-3D13-93E1-750F42FD9AF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9B1ACC07-6633-3A51-9A1B-5B636DA42DED}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

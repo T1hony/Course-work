@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\ff227b20b3843aa92ae35b0a5cf4293b\sdl3_ttf-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\e639b13154715884d3b1e4d0ac3dc096\sdl3_ttf-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\1cf62919fb091e39093c196ce2e2d3d6\sdl3_ttf-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Yandex.Disk\Course work\build\_deps\sdl3_ttf-subbuild\CMakeFiles\sdl3_ttf-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{323B5A2D-F73E-37D7-8ECF-D6819960DE58}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

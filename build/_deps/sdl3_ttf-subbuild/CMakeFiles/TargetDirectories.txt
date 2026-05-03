@@ -1,0 +1,3 @@
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-subbuild/CMakeFiles/sdl3_ttf-populate.dir
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-subbuild/CMakeFiles/ZERO_CHECK.dir

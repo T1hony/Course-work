@@ -1,0 +1,10 @@
+^C:\YANDEX.DISK\COURSE WORK\BUILD\CMAKEFILES\7FDEAE2A2E235F7B44613B94C9771597\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Yandex.Disk/Course work" "-BC:/Yandex.Disk/Course work/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Yandex.Disk/Course work/build/InfiniteGomoku.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

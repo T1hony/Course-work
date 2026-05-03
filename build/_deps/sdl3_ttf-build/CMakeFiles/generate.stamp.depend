@@ -1,0 +1,17 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDependentOption.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeParseArguments.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakePushCheckState.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/GNUInstallDirs.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/CMakeLists.txt
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/cmake/GetGitRevisionDescription.cmake
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/cmake/PkgConfigHelper.cmake
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/cmake/PrivateSdlFunctions.cmake
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/cmake/sdlcpu.cmake
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/cmake/sdlmanpages.cmake
+C:/Yandex.Disk/Course work/build/_deps/sdl3_ttf-src/cmake/sdlplatform.cmake
