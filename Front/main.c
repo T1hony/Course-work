@@ -50,7 +50,9 @@ int main(int argc, char* argv[])
     BotDifficulty diff = BOT_HARD;
     CellState current = CELL_X;
     GameStatus win_status = GAME_CONTINUES;
-
+    int bot_starts = 0; 
+    CellState human_symbol = CELL_X;
+    CellState bot_symbol = CELL_O;
     SDL_Event e;
     int run = 1;
 
@@ -62,7 +64,7 @@ int main(int argc, char* argv[])
 
             GuiState state_before_event = state;
 
-            gui_handle_event(&e, &state, &mode, &diff);
+            gui_handle_event(&e, &state, &mode, &diff, &bot_starts);
 
             if(e.type == SDL_EVENT_MOUSE_BUTTON_DOWN && 
                state == GUI_GAME && 
@@ -70,7 +72,7 @@ int main(int argc, char* argv[])
                mode != MODE_EVE &&               
                win_status == GAME_CONTINUES)
             {
-                if (mode == MODE_PVP || (mode == MODE_PVE && current == CELL_X)) {
+                if (mode == MODE_PVP || (mode == MODE_PVE && current == human_symbol)) {
                     Move m = gui_get_cell_from_mouse(e.button.x, e.button.y);
                     if(make_move(m.x, m.y, current) == MOVE_SUCCESS) {
                         write_log("Игрок сделал ход");
@@ -93,7 +95,6 @@ int main(int argc, char* argv[])
             
             PlayerInfo p1, p2;
             char log_msg[128];
-            
             p1.symbol = CELL_X;
             p2.symbol = CELL_O;
             
@@ -101,16 +102,30 @@ int main(int argc, char* argv[])
                 p1.type = PLAYER_HUMAN; strcpy(p1.info.nickname, "Игрок 1");
                 p2.type = PLAYER_HUMAN; strcpy(p2.info.nickname, "Игрок 2");
                 sprintf(log_msg, "Участники: %s (X) против %s (O)", p1.info.nickname, p2.info.nickname);
+                human_symbol = CELL_X; 
             } 
             else if (mode == MODE_PVE) {
-                p1.type = PLAYER_HUMAN; strcpy(p1.info.nickname, "Человек");
-                p2.type = PLAYER_BOT;   p2.info.difficulty = diff;
-                sprintf(log_msg, "Участники: %s (X) против Бота (O, сложность %d)", p1.info.nickname, p2.info.difficulty);
+                if (bot_starts) {
+                    p1.type = PLAYER_BOT;   p1.info.difficulty = diff;
+                    p2.type = PLAYER_HUMAN; strcpy(p2.info.nickname, "Человек");
+                    sprintf(log_msg, "Участники: Бот (X) против Человека (O)");
+                    gui_set_player_names("Бот", "Человек");
+                    human_symbol = CELL_O;
+                    bot_symbol = CELL_X;
+                } else {
+                    p1.type = PLAYER_HUMAN; strcpy(p1.info.nickname, "Человек");
+                    p2.type = PLAYER_BOT;   p2.info.difficulty = diff;
+                    sprintf(log_msg, "Участники: Человек (X) против Бота (O)");
+                    gui_set_player_names("Человек", "Бот");
+                    human_symbol = CELL_X;
+                    bot_symbol = CELL_O;
+                }
             } 
             else if (mode == MODE_EVE) {
                 p1.type = PLAYER_BOT;   p1.info.difficulty = diff;
                 p2.type = PLAYER_BOT;   p2.info.difficulty = diff;
                 sprintf(log_msg, "Участники: Бот (X) против Бота (O), сложность %d", diff);
+                gui_set_player_names("Бот (X)", "Бот (O)");
             }
             write_log(log_msg);
             
@@ -118,20 +133,24 @@ int main(int argc, char* argv[])
                 make_move(0, 0, CELL_X);
                 gui_set_bot_move(0, 0);
                 current = CELL_O;
+            } else if (mode == MODE_PVE && bot_starts) {
+                make_move(0, 0, bot_symbol);
+                gui_set_bot_move(0, 0);
+                current = human_symbol; 
             }
         }
         last_state = state;
 
         if(state == GUI_GAME && win_status == GAME_CONTINUES)
         {
-            if(mode == MODE_PVE && current == CELL_O)
+            if(mode == MODE_PVE && current == bot_symbol)
             {
-                Move b = bot_make_move(CELL_O, diff);
-                if (make_move(b.x, b.y, CELL_O) == MOVE_SUCCESS) {
+                Move b = bot_make_move(bot_symbol, diff);
+                if (make_move(b.x, b.y, bot_symbol) == MOVE_SUCCESS) {
                     gui_set_bot_move(b.x, b.y);
                     write_log("Бот сделал ход");
                     win_status = check_win(b.x, b.y);
-                    current = CELL_X;
+                    current = human_symbol;
                 }
             }
 
@@ -155,8 +174,7 @@ int main(int argc, char* argv[])
         SDL_SetRenderDrawColor(r, 0, 0, 0, 255); 
         SDL_RenderClear(r);
         
-        gui_draw(state, win_status, mode, diff);
-        
+        gui_draw(state, win_status, mode, diff, bot_starts);        
         SDL_RenderPresent(r);
     }
 

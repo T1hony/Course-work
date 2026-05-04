@@ -22,9 +22,9 @@ typedef enum {
 
 void gui_init(SDL_Window* window, SDL_Renderer* renderer);
 
-void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficulty* diff);
+void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficulty* diff, int* bot_starts);
 
-void gui_draw(GuiState state, GameStatus win_status, GameMode mode, BotDifficulty diff);
+void gui_draw(GuiState state, GameStatus win_status, GameMode mode, BotDifficulty diff, int bot_starts);
 
 Move gui_get_cell_from_mouse(int mx, int my);
 

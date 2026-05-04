@@ -65,7 +65,7 @@ void draw_circle(SDL_Renderer* renderer, int center_x, int center_y, int radius)
     }
 }
 
-void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficulty* diff) {
+void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficulty* diff, int* bot_starts) {
     if (*state == GUI_NAME_INPUT) {
         if (e->type == SDL_EVENT_TEXT_INPUT) {
             char* target = entering_first ? player1_name : player2_name;
@@ -119,8 +119,13 @@ void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficul
                 if (x > 300 && x < 450) *diff = BOT_HARD;
                 if (x > 500 && x < 650) *diff = BOT_IMPOSSIBLE;
             }
+
+            if (*mode == MODE_PVE && y > 370 && y < 420) {
+                if (x > 100 && x < 260) *bot_starts = 0;
+                if (x > 300 && x < 460) *bot_starts = 1;
+            }
             
-            int start_y = (*mode == MODE_PVP) ? 300 : 400;
+            int start_y = (*mode == MODE_PVP) ? 300 : ((*mode == MODE_PVE) ? 450 : 400);
             if (y > start_y && y < start_y + 60 && x > 300 && x < 500) {
                 if (*mode == MODE_PVP) {
                     *state = GUI_NAME_INPUT;
@@ -130,9 +135,7 @@ void gui_handle_event(SDL_Event* e, GuiState* state, GameMode* mode, BotDifficul
                     SDL_StartTextInput(win_ptr);
                 } 
                 else {
-                    if (*mode == MODE_PVE) {
-                        gui_set_player_names("Человек", "Бот");
-                    } else if (*mode == MODE_EVE) {
+                    if (*mode == MODE_EVE) {
                         gui_set_player_names("Бот (X)", "Бот (O)");
                     }
                     init_game();
@@ -206,7 +209,7 @@ static void draw_menu() {
     }
 }
 
-static void draw_settings(GameMode mode, BotDifficulty diff) {
+static void draw_settings(GameMode mode, BotDifficulty diff, int bot_starts) {
     SDL_Color white = {255, 255, 255, 255}, gray = {150, 150, 150, 255};
     draw_text("НАСТРОЙКИ ПАРТИИ", 280, 50, white);
     
@@ -255,10 +258,22 @@ static void draw_settings(GameMode mode, BotDifficulty diff) {
         }
         SDL_RenderFillRect(r, &b_h);
         draw_text("Сложно", 540, 272, white);
+        if (mode == MODE_PVE) {
+            draw_text("Кто ходит первым?", 100, 330, white);
+            
+            SDL_FRect b_h = {100, 370, 160, 50};
+            SDL_SetRenderDrawColor(r, bot_starts == 0 ? 0 : 40, bot_starts == 0 ? 150 : 40, 40, 255);
+            SDL_RenderFillRect(r, &b_h);
+            draw_text("Игрок (X)", 125, 382, white);
+
+            SDL_FRect b_b = {300, 370, 160, 50};
+            SDL_SetRenderDrawColor(r, bot_starts == 1 ? 0 : 40, bot_starts == 1 ? 150 : 40, 40, 255);
+            SDL_RenderFillRect(r, &b_b);
+            draw_text("Бот (X)", 335, 382, white);
+        }
     }
 
-    int start_y = (mode == MODE_PVP) ? 300 : 400;
-    SDL_FRect start = {300, (float)start_y, 200, 60};
+    int start_y = (mode == MODE_PVP) ? 300 : ((mode == MODE_PVE) ? 450 : 400);    SDL_FRect start = {300, (float)start_y, 200, 60};
     SDL_SetRenderDrawColor(r, 0, 180, 0, 255);
     SDL_RenderFillRect(r, &start);
     draw_text("ИГРАТЬ!", 355, start_y + 15, white);
@@ -322,11 +337,10 @@ static void draw_name_input() {
     draw_text("Нажмите BACKSPACE, чтобы стереть", 220, 450, gray);
 }
 
-void gui_draw(GuiState state, GameStatus win_status, GameMode mode, BotDifficulty diff) {
+void gui_draw(GuiState state, GameStatus win_status, GameMode mode, BotDifficulty diff, int bot_starts) {
     switch (state) {
         case GUI_MENU: draw_menu(); break;
-        case GUI_SETTINGS: draw_settings(mode, diff); break;
-        case GUI_NAME_INPUT: draw_name_input(); break;
+        case GUI_SETTINGS: draw_settings(mode, diff, bot_starts); break;        case GUI_NAME_INPUT: draw_name_input(); break;
         case GUI_HELP: draw_help(); break;
         case GUI_ABOUT: draw_about(); break;
         case GUI_GAME: draw_grid(); draw_marks(); break;

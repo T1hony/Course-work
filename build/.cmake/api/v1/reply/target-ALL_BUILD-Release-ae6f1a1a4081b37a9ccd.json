@@ -1,0 +1,36 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"build/_deps/sdl3_ttf-src/external/plutovg/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "plutovg::@8b2c8d8d740251e3cd60"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@8b2c8d8d740251e3cd60",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "_deps/sdl3_ttf-build/external/plutovg",
+		"source" : "build/_deps/sdl3_ttf-src/external/plutovg"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
